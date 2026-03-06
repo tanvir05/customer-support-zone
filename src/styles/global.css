@@ -1,19 +1,16 @@
 :root{
-  /* Light theme base */
-  --text: #000000;
-  --muted: #000000;
-  --bg: #f6f7fb;            /* page background */
-  --surface: #ffffff;       /* cards/panels */
-  --surface-2: #f1f3f8;     /* subtle section bg */
-  --stroke: #e6e8f0;        /* borders */
-  --text: #0f172a;          /* main text */
-  --muted: #5b6476;         /* secondary text */
+  --bg: #f6f7fb;
+  --surface: #ffffff;
+  --surface-2: #f3f5fb;
+  --stroke: #e5e7eb;
 
-  /* Brand */
-  --accent: #6d5efc;        /* purple */
-  --accent2: #12c2e9;       /* cyan */
+  --text: #0f172a;     /* near-black */
+  --muted: #475569;    /* readable gray */
+  --muted2: #64748b;   /* lighter gray (still readable) */
 
-  /* Status */
+  --accent: #6d5efc;
+  --accent2: #12c2e9;
+
   --success: #16a34a;
   --warning: #f59e0b;
   --danger: #ef4444;
