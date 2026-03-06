@@ -4,17 +4,22 @@ export default function Navbar({ onNewTicket }) {
   return (
     <header className="nav">
       <div className="nav-inner">
+        {/* Left */}
         <div className="brand">
-          <div className="logo-badge">CS</div>
-          <span className="brand-name">Customer Support</span>
+          <span className="brand-name">CS - Ticket System</span>
         </div>
 
+        {/* Right */}
         <nav className="nav-links">
-          <a href="#tickets">Tickets</a>
-          <a href="#status">Task Status</a>
-          <a href="#resolved">Resolved</a>
-          <button className="btn-primary" onClick={onNewTicket}>
-            New Ticket
+          <a href="#home">Home</a>
+          <a href="#faq">FAQ</a>
+          <a href="#changelog">Changelog</a>
+          <a href="#blog">Blog</a>
+          <a href="#download">Download</a>
+          <a href="#contact">Contact</a>
+
+          <button className="btn-primary" type="button" onClick={onNewTicket}>
+            + New Ticket
           </button>
         </nav>
       </div>
