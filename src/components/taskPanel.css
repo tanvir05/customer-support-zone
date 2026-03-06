@@ -1,95 +1,54 @@
+/* Whole right panel container */
 .panel {
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 
+/* Each section box */
 .panel-section {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 16px;
-  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
 }
 
+/* Section header row */
 .panel-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  margin-bottom: 12px;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
+/* Task Status & Resolved Task */
+.section-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Badge count */
 .badge {
-  padding: 6px 10px;
+  min-width: 34px;
+  height: 34px;
   border-radius: 999px;
-  background: rgba(0,0,0,0.22);
-  border: 1px solid rgba(255,255,255,0.14);
-  font-size: 12px;
-  color: rgba(255,255,255,0.78);
-}
-
-.panel-empty {
-  font-size: 13px;
-  color: rgba(255,255,255,0.65);
-  padding: 10px;
-  border: 1px dashed rgba(255,255,255,0.18);
-  border-radius: 12px;
-}
-
-.task-list {
   display: grid;
-  gap: 10px;
-}
+  place-items: center;
 
-.task-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 12px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-.task-title {
-  font-weight: 650;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #6b7280;
   font-size: 13px;
-  color: rgba(255,255,255,0.86);
-}
-
-.btn-complete {
-  padding: 9px 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(34, 197, 94, 0.35);
-  background: rgba(34, 197, 94, 0.12);
-  color: rgba(255,255,255,0.92);
-  cursor: pointer;
-  font-weight: 650;
-}
-
-.btn-complete:hover {
-  filter: brightness(1.08);
-}
-
-.resolved-list {
-  display: grid;
-  gap: 10px;
-}
-
-.resolved-item {
-  padding: 12px;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.04);
-}
-
-.resolved-title {
   font-weight: 700;
-  font-size: 13px;
 }
 
-.resolved-sub {
-  margin-top: 6px;
-  font-size: 12px;
-  color: rgba(255,255,255,0.65);
+/* Placeholder text under headings */
+.panel-empty {
+  margin-top: 10px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.4;
 }
