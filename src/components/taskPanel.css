@@ -70,3 +70,8 @@
 .btn-complete:hover{
   background: #15803d;
 }
+
+.resolved-title{
+  margin: 0;
+  font-weight: 700;
+}

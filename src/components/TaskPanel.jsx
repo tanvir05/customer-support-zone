@@ -45,8 +45,6 @@ export default function TaskPanel({ inProgress, resolved, onComplete }) {
             {resolved.map((t) => (
               <div className="resolved-item" key={t.id}>
                 <div className="resolved-title">{t.title}</div>
-                <div className="resolved-sub">
-                  {t.id} • {t.customer}
                 </div>
               </div>
             ))}
