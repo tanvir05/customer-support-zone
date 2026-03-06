@@ -4,22 +4,17 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-
+        {/* Column 1 */}
         <div className="footer-col footer-brand">
           <h3 className="footer-title">CS — Ticket System</h3>
           <p className="footer-text">
-            CS Ticketing Sytem established in 2020.
-            <br>
-            It is one of the best ticketing system in BD.
-            <br>
-            We provide service to all type of business needs.
-            <br>
-            Contact us to know more.
-
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
           </p>
         </div>
 
-
+        {/* Column 2 */}
         <div className="footer-col">
           <h4 className="footer-heading">Company</h4>
           <a className="footer-link" href="#about">About Us</a>
@@ -27,23 +22,23 @@ export default function Footer() {
           <a className="footer-link" href="#contact">Contact Sales</a>
         </div>
 
-
+        {/* Column 3 */}
         <div className="footer-col">
           <h4 className="footer-heading">Services</h4>
-          <a className="footer-link" href="#products">Products & Services</a>
+          <a className="footer-link" href="#products">Products &amp; Services</a>
           <a className="footer-link" href="#stories">Customer Stories</a>
           <a className="footer-link" href="#apps">Download Apps</a>
         </div>
 
-
+        {/* Column 4 */}
         <div className="footer-col">
           <h4 className="footer-heading">Information</h4>
           <a className="footer-link" href="#privacy">Privacy Policy</a>
-          <a className="footer-link" href="#terms">Terms & Conditions</a>
+          <a className="footer-link" href="#terms">Terms &amp; Conditions</a>
           <a className="footer-link" href="#join">Join Us</a>
         </div>
 
-
+        {/* Column 5 */}
         <div className="footer-col">
           <h4 className="footer-heading">Social Links</h4>
 
