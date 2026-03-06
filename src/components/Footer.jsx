@@ -2,18 +2,75 @@ import "./footer.css";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="site-footer">
       <div className="footer-inner">
-        <div className="footer-left">
-          <div className="footer-brand">Customer Support</div>
-          <div className="footer-copy">© {new Date().getFullYear()} All rights reserved.</div>
+
+        <div className="footer-col footer-brand">
+          <h3 className="footer-title">CS — Ticket System</h3>
+          <p className="footer-text">
+            CS Ticketing Sytem established in 2020.
+            <br>
+            It is one of the best ticketing system in BD.
+            <br>
+            We provide service to all type of business needs.
+            <br>
+            Contact us to know more.
+
+          </p>
         </div>
 
-        <div className="footer-right">
-          <a href="#tickets">Tickets</a>
-          <a href="#status">Task Status</a>
-          <a href="#resolved">Resolved</a>
+
+        <div className="footer-col">
+          <h4 className="footer-heading">Company</h4>
+          <a className="footer-link" href="#about">About Us</a>
+          <a className="footer-link" href="#mission">Our Mission</a>
+          <a className="footer-link" href="#contact">Contact Sales</a>
         </div>
+
+
+        <div className="footer-col">
+          <h4 className="footer-heading">Services</h4>
+          <a className="footer-link" href="#products">Products & Services</a>
+          <a className="footer-link" href="#stories">Customer Stories</a>
+          <a className="footer-link" href="#apps">Download Apps</a>
+        </div>
+
+
+        <div className="footer-col">
+          <h4 className="footer-heading">Information</h4>
+          <a className="footer-link" href="#privacy">Privacy Policy</a>
+          <a className="footer-link" href="#terms">Terms & Conditions</a>
+          <a className="footer-link" href="#join">Join Us</a>
+        </div>
+
+
+        <div className="footer-col">
+          <h4 className="footer-heading">Social Links</h4>
+
+          <div className="social-item">
+            <span className="social-icon">𝕏</span>
+            <a className="footer-link" href="#x">@CS — Ticket System</a>
+          </div>
+
+          <div className="social-item">
+            <span className="social-icon">in</span>
+            <a className="footer-link" href="#linkedin">@CS — Ticket System</a>
+          </div>
+
+          <div className="social-item">
+            <span className="social-icon">f</span>
+            <a className="footer-link" href="#facebook">@CS — Ticket System</a>
+          </div>
+
+          <div className="social-item">
+            <span className="social-icon">✉</span>
+            <a className="footer-link" href="mailto:support@cst.com">support@cst.com</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        © 2025 CS — Ticket System. All rights reserved.
       </div>
     </footer>
   );
