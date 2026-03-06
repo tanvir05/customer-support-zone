@@ -1,35 +1,47 @@
 import "./ticketCard.css";
 
-function pillClass(priority) {
-  if (priority === "High") return "pill pill-high";
-  if (priority === "Medium") return "pill pill-medium";
-  return "pill pill-low";
+function getStatusClass(status) {
+  const s = (status || "").toLowerCase();
+  if (s.includes("in-progress")) return "status status-progress";
+  return "status status-open";
+}
+
+function getPriorityClass(priority) {
+  const p = (priority || "").toLowerCase();
+  if (p.includes("high")) return "priority priority-high";
+  if (p.includes("medium")) return "priority priority-medium";
+  return "priority priority-low";
 }
 
 export default function TicketCard({ ticket, onClick }) {
   return (
-    <button className="ticket-card" onClick={onClick} type="button">
+    <button className="ticket-card" type="button" onClick={onClick}>
+      {/* Top row */}
       <div className="ticket-top">
-        <div className="ticket-id">{ticket.id}</div>
-        <div className={pillClass(ticket.priority)}>{ticket.priority}</div>
+        <h3 className="ticket-title">{ticket.title}</h3>
+        <span className={getStatusClass(ticket.status)}>
+          <span className="status-dot" />
+          {ticket.status}
+        </span>
       </div>
 
-      <h3 className="ticket-title">{ticket.title}</h3>
+      {/* Middle */}
       <p className="ticket-desc">{ticket.description}</p>
 
-      <div className="ticket-meta">
-        <div className="meta-row">
-          <span className="meta-label">Customer</span>
-          <span className="meta-value">{ticket.customer}</span>
-        </div>
-        <div className="meta-row">
-          <span className="meta-label">Status</span>
-          <span className="meta-value">{ticket.status}</span>
-        </div>
-        <div className="meta-row">
-          <span className="meta-label">Created</span>
-          <span className="meta-value">{ticket.createdAt}</span>
-        </div>
+      {/* Bottom row */}
+      <div className="ticket-bottom">
+        <span className="meta">{ticket.id}</span>
+
+        <span className={getPriorityClass(ticket.priority)}>
+          {ticket.priority}
+        </span>
+
+        <span className="meta meta-right">{ticket.customer}</span>
+
+        <span className="meta meta-date">
+          <span className="meta-icon">📅</span>
+          {ticket.createdAt}
+        </span>
       </div>
     </button>
   );
