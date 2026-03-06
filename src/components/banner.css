@@ -1,67 +1,74 @@
 .banner {
-  border-radius: 18px;
-  border: 1px solid var(--stroke);
-  background: linear-gradient(135deg,
-    rgba(109, 94, 252, 0.65),
-    rgba(18, 194, 233, 0.35),
-    rgba(255, 255, 255, 0.06)
-  );
-  padding: 18px;
-  overflow: hidden;
+  margin-top: 18px;
 }
 
-.banner-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.banner-title {
-  margin: 0;
-  font-size: 24px;
-  letter-spacing: 0.3px;
-}
-
-.banner-subtitle {
-  margin: 8px 0 0 0;
-  color: rgba(255,255,255,0.75);
-  font-size: 14px;
-  max-width: 560px;
-}
-
-.stats {
+.banner-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  min-width: 260px;
+  gap: 18px;
 }
 
 .stat-card {
-  background: rgba(11, 18, 32, 0.35);
-  border: 1px solid rgba(255,255,255,0.16);
-  border-radius: 14px;
-  padding: 12px;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
+}
+
+/* gradient backgrounds */
+.stat-progress {
+  background: linear-gradient(135deg, #632ee3 0%, #9f62f2 100%);
+}
+
+.stat-resolved {
+  background: linear-gradient(135deg, #54cf68 0%, #00827a 100%);
+}
+
+/* Vector overlay */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  /* vector image inserted */
+  background-image: url("../assets/vector1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Text on top of vector */
+.stat-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
 }
 
 .stat-label {
-  color: rgba(255,255,255,0.72);
-  font-size: 12px;
-  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.95;
+  margin-bottom: 10px;
 }
 
 .stat-value {
-  font-size: 22px;
+  font-size: 44px;
   font-weight: 800;
+  line-height: 1;
 }
 
+/* Mobile */
 @media (max-width: 900px) {
-  .banner-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .stats {
-    width: 100%;
-    min-width: 0;
+  .banner-grid {
+    grid-template-columns: 1fr;
   }
 }

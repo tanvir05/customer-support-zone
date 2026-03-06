@@ -12,17 +12,17 @@ import { initialTickets } from "./data/tickets";
 import "./styles/app.css";
 
 export default function App() {
-  // Customer tickets list (left). This list will shrink when tickets are resolved.
+  // Customer tickets list
   const [tickets, setTickets] = useState(initialTickets);
 
-  // Task Status section (right): “In Progress”
+  // Task Status section
   const [inProgress, setInProgress] = useState([]);
 
-  // Resolved list (right)
+  // Resolved list
   const [resolved, setResolved] = useState([]);
 
   const inProgressCount = inProgress.length;
-  const resolvedCount = resolved.length; // default starts at 0
+  const resolvedCount = resolved.length;
 
   const ticketsById = useMemo(() => {
     const map = new Map();
@@ -31,7 +31,7 @@ export default function App() {
   }, [tickets]);
 
   const handleNewTicket = () => {
-    toast.info("New Ticket button clicked (hook up a form/modal if needed).", {
+    toast.info("New Ticket Created", {
       position: "top-right",
     });
   };
@@ -44,12 +44,12 @@ export default function App() {
     const alreadyResolved = resolved.some((t) => t.id === ticketId);
 
     if (alreadyResolved) {
-      toast.info("This ticket is already resolved.", { position: "top-right" });
+      toast.info("This Ticket is Resolved.", { position: "top-right" });
       return;
     }
 
     if (alreadyInProgress) {
-      toast.info("This ticket is already in progress.", { position: "top-right" });
+      toast.info("This Ticket is in Progress.", { position: "top-right" });
       return;
     }
 
@@ -70,7 +70,7 @@ export default function App() {
     const resolvedTicket = { ...ticket, status: "Resolved" };
     setResolved((prev) => [resolvedTicket, ...prev]);
 
-    // Remove from customer tickets list (requirement)
+    // Remove from customer tickets list
     setTickets((prev) => prev.filter((t) => t.id !== ticketId));
 
     toast.success(`Completed: "${ticket.title}"`, { position: "top-right" });
